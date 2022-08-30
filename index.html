@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <!-- ====================Registration Form============================== -->
-    <h1 class="display-3 heading">Registration Form</h1>
-    <div class="container form">
+   <div class="containe">
+     <h1 class="display-3 heading">Registration Form</h1>
+     <div class="container form">
         
     <form class="row g-3 needs-validation" novalidate>
   <div class="col-md-6">
@@ -51,7 +51,7 @@
     <label for="Phonenumber" class="form-label">Phone Number</label>
     <div class="input-group has-validation">
       <span class="input-group-text" id="inputGroupPrepend">+91</span>
-      <input type="number" class="form-control" id="Phonenumber" aria-describedby="inputGroupPrepend" required>
+      <input type="number" maxlength="10"onkeypress="if (this.value.length > 9) return false;" class="form-control" id="Phonenumber" aria-describedby="inputGroupPrepend" required>
       <div class="invalid-feedback" id="Phone-invalid">
         Please provide a valid Phone Number.
       </div>
@@ -95,18 +95,19 @@
   <div class="col-12">
     <div class="form-check">
       <input class="form-check-input" type="checkbox" value="" id="tnC" required>
-      <label class="form-check-label" for="tnC">
+      <label class="form-check-label form-label"  for="tnC">
         Agree to terms and conditions
       </label>
-      <div class="invalid-feedback" id="Tnc-invalid">
+      <div class="invalid-feedback form-label"  id="Tnc-invalid">
         You must agree before submitting.
       </div>
     </div>
   </div>
   <div class="col-12">
-    <button class="btn btn-dark btn" type="button" id="Submit-Btn">Submit form</button>
+    <button class="btn btn-dark btn" type="button" id="Submit-Btn">Register Now</button>
   </div>
 </form>
+ </div>
 
 </div>
 
